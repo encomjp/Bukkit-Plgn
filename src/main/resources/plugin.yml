@@ -1,0 +1,34 @@
+name: Plgn
+version: 1.4
+main: com.pepe.plgn.Plgn
+api-version: 1.16
+authors: [ pepe ]
+description: plgn
+commands:
+  plgn:
+    aliases: []
+    description: base
+  plgn heal:
+    aliases: [ ]
+    description: Heal yourself
+  plgn config:
+    aliases: []
+    description: Config test
+  plgn debug:
+    aliases: []
+    description: debug
+  plgn debug item:
+    aliases: []
+    description: debug item held in hand
+  plgn debug player:
+    aliases: []
+    description: debug player
+  plgn spawn mob:
+    aliases: []
+    description: spawn mob
+  plgn spawn mob jockey:
+    aliases: []
+    description: spawn Jockey (Skeleton ridding on a Spider)
+  plgn spawn mob Giant:
+    aliases: []
+    description: spawn Giant Zombie
