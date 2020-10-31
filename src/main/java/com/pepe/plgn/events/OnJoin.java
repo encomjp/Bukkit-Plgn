@@ -1,5 +1,6 @@
 package com.pepe.plgn.events;
 
+import com.pepe.plgn.Plgn;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Sound;
@@ -27,14 +28,5 @@ public class OnJoin {
                 BarColor.BLUE,
                 BarStyle.SOLID,
                 BarFlag.PLAY_BOSS_MUSIC);
-        bossBar.addPlayer(player);
-
-        while(true) {
-            for(int i = 0; i > 1; i += 0.1){
-                bossBar.setProgress(0.1);
-                TimeUnit.SECONDS.sleep(5);
-            }
-        }
     }
-
 }

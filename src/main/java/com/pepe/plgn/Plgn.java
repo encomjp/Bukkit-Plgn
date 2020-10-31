@@ -41,12 +41,12 @@ public final class Plgn extends JavaPlugin implements Listener {
         OnJoin onjoin = new OnJoin();
         onjoin.welcome(player);
         onjoin.bossBar(player);
-
     }
 
     @EventHandler
     public void onThrow(PlayerEggThrowEvent e) {
         e.setHatching(false);
     }
+
 
 }
