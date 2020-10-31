@@ -12,7 +12,7 @@ public class SpawnStand {
     public void init(Location location){
         ArmorStand stand = (ArmorStand) location.getWorld().spawnEntity(location, EntityType.ARMOR_STAND);
         stand.setHeadPose(new EulerAngle(Math.toRadians(52),Math.toRadians(125), Math.toRadians(81)));
-        stand.setHelmet(new ItemStack(Material.DIAMOND_HELMET));
+        stand.setHelmet(new ItemStack(Material.DRAGON_HEAD));
         stand.setChestplate(new ItemStack(Material.GOLDEN_CHESTPLATE));
         stand.setInvisible(true);
         stand.setGravity(true);

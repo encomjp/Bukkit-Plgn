@@ -1,23 +1,20 @@
 package com.pepe.plgn;
-import com.pepe.plgn.events.MoveRestrictor;
-import com.pepe.plgn.events.OnJoin;
-import com.pepe.plgn.events.SpawnStand;
+import com.pepe.plgn.events.*;
 import org.bukkit.*;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
-import org.bukkit.event.entity.EntitySpawnEvent;
 import org.bukkit.event.player.PlayerEggThrowEvent;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.event.player.PlayerMoveEvent;
 import org.bukkit.plugin.java.JavaPlugin;
 
-import static org.bukkit.Sound.BLOCK_ANVIL_FALL;
-
 public final class Plgn extends JavaPlugin implements Listener {
 
     @Override
     public void onEnable() {
+        Bukkit.getPluginManager().registerEvents(new PingListener(), this);
+
         System.out.println("Plgn working 1.3 / PlayerLoc / Mov not allowed w. Perm / Egg Brutalizer / Joining Sound + Msg");
         this.getConfig().options().copyDefaults();
         saveDefaultConfig();
@@ -44,10 +41,12 @@ public final class Plgn extends JavaPlugin implements Listener {
         moverestrictor.init(player, e);
     }
 
-    @EventHandler void onJoin(PlayerJoinEvent e){
+    @EventHandler void onJoin(PlayerJoinEvent e) throws InterruptedException {
         Player player = e.getPlayer();
         OnJoin onjoin = new OnJoin();
-        onjoin.init(player);
+        onjoin.welcome(player);
+        onjoin.bossBar(player);
+
     }
 
     @EventHandler
