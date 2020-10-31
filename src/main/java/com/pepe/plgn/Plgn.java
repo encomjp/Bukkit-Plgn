@@ -21,17 +21,12 @@ public final class Plgn extends JavaPlugin implements Listener {
         getCommand("Plgn").setExecutor(new PlgnMainCommand());                                                          // Main CommandHandler
         Bukkit.getPluginManager().registerEvents(this, this);                                                   // Eventhandler
         SpawnStand spawnstand = new SpawnStand();                                                                           // ArmorStand Event
-        spawnstand.init(new Location(Bukkit.getWorld("World"), -653, 142, 243));                                // Init ArmorStand Event with Location
+        spawnstand.init(new Location(Bukkit.getWorld("World"), -653, 142, 243));// Init ArmorStand Event with Location
     }
 
     @Override
     public void onDisable() {
         // Plugin shutdown logic
-    }
-
-    public void editConfig() {
-
-        this.getConfig().set("Word", "Hello Apple");
     }
 
     @EventHandler
@@ -51,9 +46,7 @@ public final class Plgn extends JavaPlugin implements Listener {
 
     @EventHandler
     public void onThrow(PlayerEggThrowEvent e) {
-        Player player = e.getPlayer();
         e.setHatching(false);
-
     }
 
 }

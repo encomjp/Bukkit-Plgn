@@ -8,7 +8,7 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.util.EulerAngle;
 
 public class SpawnStand {
-        @Deprecated
+        @SuppressWarnings("deprecation")
     public void init(Location location){
         ArmorStand stand = (ArmorStand) location.getWorld().spawnEntity(location, EntityType.ARMOR_STAND);
         stand.setHeadPose(new EulerAngle(Math.toRadians(52),Math.toRadians(125), Math.toRadians(81)));
