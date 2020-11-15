@@ -32,3 +32,6 @@ commands:
   plgn spawn mob Giant:
     aliases: []
     description: spawn Giant Zombie
+  command:
+    aliases: []
+    description: cloud test

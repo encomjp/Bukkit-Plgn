@@ -71,5 +71,21 @@
             <version>1.16.3-R0.1-SNAPSHOT</version>
             <scope>provided</scope>
         </dependency>
+
+        <dependency>
+            <groupId>cloud.commandframework</groupId>
+            <artifactId>cloud-bukkit</artifactId>
+            <version>1.1.0</version>
+        </dependency>
+        <!--
+        ~    Optional: Allows you to use annotated methods
+        ~    to declare commands
+        -->
+        <dependency>
+            <groupId>cloud.commandframework</groupId>
+            <artifactId>cloud-annotations</artifactId>
+            <version>1.1.0</version>
+        </dependency>
+
     </dependencies>
 </project>

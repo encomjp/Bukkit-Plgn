@@ -6,6 +6,7 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
+
 public class PlgnMainCommand implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender commandSender, Command command, String s, String[] strings) {
@@ -26,7 +27,14 @@ try {
     } else if (strings[0].equalsIgnoreCase("spawn") && strings[1].equalsIgnoreCase("mob")) {
         SpawnMob spawnMob = new SpawnMob();
         spawnMob.init(player, strings);
+    } else if (strings[0].equalsIgnoreCase("kick") && commandSender instanceof Player){
+        Kick kickplayer = new Kick();
+        kickplayer.init(player, strings);
+    } else if (strings[0].equalsIgnoreCase("ban") && commandSender instanceof Player){
+        Ban ban = new Ban();
+        ban.init(player, strings);
     }
+
 
 } catch (Exception e){ player.sendMessage("Unknown command ");
 }

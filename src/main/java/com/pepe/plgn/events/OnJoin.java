@@ -28,5 +28,6 @@ public class OnJoin {
                 BarColor.BLUE,
                 BarStyle.SOLID,
                 BarFlag.PLAY_BOSS_MUSIC);
+        bossBar.addPlayer(player);
     }
 }
